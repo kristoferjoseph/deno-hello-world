@@ -3,12 +3,21 @@
   "version": "0.0.0",
   "description": "Begin Deno Hello World! app",
   "scripts": {
-    "start": "cross-env NODE_ENV=testing npx sandbox"
-  },
-  "devDependencies": {
-    "@architect/sandbox": "latest"
+    "build:backend": "scripts/build",
+    "build:browser": "rollup -c",
+    "build": "npm run build:browser && npm run build:backend",
+    "start": "npm run build && cross-env NODE_ENV=testing sandbox"
   },
   "dependencies": {
-    "cross-env": "^6.0.3"
+    "@architect/sandbox": "latest",
+    "@rollup/plugin-typescript": "^2.1.0",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "cross-env": "^6.0.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.29.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.4"
   }
 }

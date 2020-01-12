@@ -1,0 +1,4 @@
+#!/bin/sh
+# build backend for SSR
+cd src/http/get-index
+DENO_DIR=.deno_dir deno --reload index.ts

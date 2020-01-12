@@ -4,6 +4,9 @@ begin-app
 @aws
 runtime deno
 
+@static
+folder dist
+
 @http
 get /
 

@@ -1,5 +1,10 @@
-export async function handler(request) {
+import render from './render.tsx'
+
+export async function handler() {
   return {
-    body: JSON.stringify({ok: true, deno: Deno.version})
+    headers: {
+      'content-type': 'text/html; charset=utf8'
+    },
+    body: render()
   }
 }

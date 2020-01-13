@@ -1,6 +1,6 @@
 import React from 'https://dev.jspm.io/react'
 import ReactDOMServer from 'https://dev.jspm.io/react-dom/server'
-import { Clock } from '../../components/clock.tsx'
+import { Clock } from './clock.tsx'
 
 export default function render() {
   let body = ReactDOMServer.renderToString(<Clock/>)

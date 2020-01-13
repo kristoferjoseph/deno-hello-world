@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Begin Deno Hello World! app",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c .rollup.config.js",
     "start": "npm run build && cross-env NODE_ENV=testing sandbox"
   },
   "dependencies": {
